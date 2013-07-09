@@ -3,6 +3,7 @@ pythonStyle
 
 ##[Night Seminar by PC][1]
 1. 质疑：Instance Variables: lower_with_under (public)?
+
 ```python
 class CompName():
     pass
