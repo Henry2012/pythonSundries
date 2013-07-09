@@ -2,7 +2,7 @@ pythonStyle
 ===========
 
 ##[Night Seminar by PC][1]
-1. 质疑：Instance Variables: lower_with_under (public)?
+* 质疑：Instance Variables: lower_with_under (public)?
 
 ```python
 class CompName():
@@ -11,7 +11,7 @@ class CompName():
 comp_name = CompName()
 ```
 
-2. eclipse: pydev, code analysis
+* eclipse: pydev, code analysis
     * pep8.py: --ignore=E501,W2
     * options
 
