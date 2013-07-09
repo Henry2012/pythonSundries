@@ -11,6 +11,10 @@ class CompName():
 comp_name = CompName()
 ```
 
+2. eclipse: pydev, code analysis
+    * pep8.py: --ignore=E501,W2
+    * options
+
   
 
 ##Reference
