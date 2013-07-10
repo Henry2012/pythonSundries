@@ -13,7 +13,6 @@ comp_name = CompName()
     * pep8.py: --ignore=E501,W2
     * options
     
------------------------------------------------------
 ###Reference###
 1. https://pep8.readthedocs.org/en/latest/intro.html?highlight=ignore
 2. http://www.python.org/dev/peps/pep-0008/#naming-conventions
@@ -22,3 +21,12 @@ comp_name = CompName()
 
 
 [1]: http://google-styleguide.googlecode.com/svn/trunk/pyguide.html
+
+-----------------------------------------------------
+###Rename Repo###
+
+![alt text][demo]
+Setting --> Repository Name Rename
+![alt text][rename]
+[demo]: https://github.com/Henry2012/pythonSundries/blob/master/images/rename_repo.png "Demo"
+[rename]: https://github.com/Henry2012/pythonSundries/blob/master/images/setting.png "Rename"
