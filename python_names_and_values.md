@@ -1,22 +1,22 @@
 ###Reference###
 1. http://nedbatchelder.com/text/names.html
 
-
 ###Facts###
 1. Names refer to values.
 2. Many names can refer to one value.
-```python
-# Now x and y both refer to the same value.
-# We have only one 23, and x and y both refer to it.
-x = 23
-y = x
-```
+
+	```python
+	# Now x and y both refer to the same value.
+	# We have only one 23, and x and y both refer to it.
+	x = 23
+	y = x
+	```
 3. Values live until nothing references them.
 4. Assignment never copies data.
 5. Changes in a value are visible through all of its names.
 6. 2 types of values:
 	* immutable 
-		* Immutable values include numbers, strings, frozenset, and tuples.
+		* Immutable values include numbers, strings, frozensets, and tuples.
 		* Immutable means that the value can never change, instead when you think you are changing the value, you are really making new values from old ones.
 	* mutable 
 		* Almost everything else is mutable, including lists, dicts, and user-defined objects. 
@@ -43,7 +43,6 @@ y = x
 	print foo3(4)
 	```
 	Output
-	
 	```python
 	[4]
 	[4, 5]
@@ -80,14 +79,13 @@ y = x
 	import ... as X
 	from ... import ... as X
 	```
-	* 
 9. Any name can refer to any value at any time.
 	* A name can refer to an integer, and then to a string, and then to a function, and then to a module.
 10. Names have no type, values have no scope.
 	* When we say that a function has a local variable, we mean that the name is scoped to the function: you can't use the name outside the function, and when the function returns, the name is destroyed. But as we've seen, if the name's value has other references, it will live on beyond the function call. It is a local name, not a local value.
 11. Values can't be deleted, only names can.
 
-###Conclusion###
+###Roundup###
 1. __names__ refer to __values__.
 2. One value could have mutiple references.
 3. References are not just __names__.
