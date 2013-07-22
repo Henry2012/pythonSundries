@@ -2,6 +2,7 @@
 1. http://www.slideshare.net/r1chardj0n3s/dont-do-this-24000445#btnNext
 
 
+
 1. generator
 	* 'generator' object has no attribute '__next__'
 	
