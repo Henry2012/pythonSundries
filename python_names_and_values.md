@@ -55,16 +55,24 @@
 
 7. 	References can be more than just names.
 	* names look like this:
+	
 	![](/images/names.png)
+	
 	* bindings look like this:
+	
 	![](/images/bindings.png)
+	
 	* objects look like this:
+	
 	![](/images/objects.png)
+	
 	```python
 	d = {'a': 1, 'b':2}
 	testL = d.values()
 	```
+	
 	![](/images/dict.png)
+	
 	```python
 	L = range(2)
 	copiedL = L[:]
@@ -78,6 +86,7 @@
 	True
 	```
 	![](/images/dict2.png)
+	
 	```python
 	# Each of these left-hand sides is a reference
 	# attributes of objects and entries in lists or dictionaries are also references
