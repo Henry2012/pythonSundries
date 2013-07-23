@@ -71,9 +71,8 @@
 	L = range(2)
 	copiedL = L[:]
 	L[0] = 1
-	n = 1
-	print copiedL
-	print L[0] is n is L[1]
+	s = 1
+	print L[0] is s is L[1]
 	```
 	Output
 	```python
