@@ -55,32 +55,16 @@
 
 7. 	References can be more than just names.
 	# names look like this:
-	,-----.
-    | foo |
-    `-----'
+	![](/images/names.png)
 	# bindings look like this:
-	------------>
+	![](/images/bindings.png)
 	# objects look like this:
-	+-------+
-    | "bar" |
-    +-------+
+	![](/images/objects.png)
 	```python
 	d = {'a': 1, 'b':2}
 	testL = d.values()
 	```
-	,------.       +-------+
-    | d    |------>|+-----+|             +---+
-    `------'       || "a" |+------------>| 1 |
-                   |+-----+|             +---+
-                   |+-----+|              /\
-                   || "b" |+-----.    ,---'
-                   |+-----+|     |    |
-                   +-------+     `----+----.
-                                      |    |
-    ,------.       +-----+            |    \/
-    |testL |------>| [0]-+------------'   +---+
-    `------'       | [1]-+--------------->| 2 |
-                   +-----+                +---+
+	![](/images/dict.png)
 	```python
 	L = range(2)
 	copiedL = L[:]
@@ -93,23 +77,7 @@
 	```
 	True
 	```
-	,------.       +-------+
-    | L    |------>|+-----+|             +---+
-    `------'       || [0] |+------------>| 0 |
-                   |+-----+|             +---+
-                   |+-----+|              /\
-                   || [1] |+-----.    ,---'
-                   |+-----+|     |    |
-                   +-------+     `----+----.
-                                      |    |
-    ,-------.       +-----+            |    \/
-    |copiedL|------>| [0]-+------------'   +---+
-    `-------'       | [1]-+--------------->| 1 |
-                    +-----+                +---+
-											 /\	
-	,-------.                                |       
-    |   s   |---------------------------------
-    `-------'
+	![](/images/dict2.png)
 	```python
 	# Each of these left-hand sides is a reference
 	# attributes of objects and entries in lists or dictionaries are also references

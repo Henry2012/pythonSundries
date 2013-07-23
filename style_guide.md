@@ -67,5 +67,5 @@ topics_list = [t for t in topics
 ![alt text][demo]
 Setting --> Repository Name Rename
 ![alt text][rename]
-[demo]: /images/rename_repo.png "Demo"
-[rename]: /images/setting.png "Rename"
+[demo]: https://github.com/Henry2012/pythonSundries/blob/master/images/rename_repo.png "Demo"
+[rename]: https://github.com/Henry2012/pythonSundries/blob/master/images/setting.png "Rename"
