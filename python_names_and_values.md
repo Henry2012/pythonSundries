@@ -55,22 +55,16 @@
 
 7. 	References can be more than just names.
 	* names look like this:
-	
 	![](/images/names.png)
-	
 	* bindings look like this:
-	
 	![](/images/bindings.png)
-	
 	* objects look like this:
-	
 	![](/images/objects.png)
 	
 	```python
 	d = {'a': 1, 'b':2}
 	testL = d.values()
 	```
-	
 	![](/images/dict.png)
 	
 	```python
@@ -82,7 +76,7 @@
 	print L[0] is n is L[1]
 	```
 	Output
-	```
+	```python
 	True
 	```
 	![](/images/dict2.png)
