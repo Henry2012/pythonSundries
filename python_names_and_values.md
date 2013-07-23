@@ -114,6 +114,7 @@
 	```python
 	True
 	True
+	True
 	False
 	```
 8. Lots of things are assignment
