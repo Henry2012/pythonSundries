@@ -1,5 +1,6 @@
 ###Reference###
 1. http://nedbatchelder.com/text/names.html
+2. http://python.net/~mwh/hacks/objectthink.html
 
 ###Facts###
 1. Names refer to values.
@@ -53,12 +54,97 @@
 	```
 
 7. 	References can be more than just names.
+	# names look like this:
+	,-----.
+    | foo |
+    `-----'
+	# bindings look like this:
+	------------>
+	# objects look like this:
+	+-------+
+    | "bar" |
+    +-------+
+	```python
+	d = {'a': 1, 'b':2}
+	testL = d.values()
+	```
+	,------.       +-------+
+    | d    |------>|+-----+|             +---+
+    `------'       || "a" |+------------>| 1 |
+                   |+-----+|             +---+
+                   |+-----+|              /\
+                   || "b" |+-----.    ,---'
+                   |+-----+|     |    |
+                   +-------+     `----+----.
+                                      |    |
+    ,------.       +-----+            |    \/
+    |testL |------>| [0]-+------------'   +---+
+    `------'       | [1]-+--------------->| 2 |
+                   +-----+                +---+
+	```python
+	L = range(2)
+	copiedL = L[:]
+	L[0] = 1
+	n = 1
+	print copiedL
+	print L[0] is n is L[1]
+	```
+	Output
+	```
+	True
+	```
+	,------.       +-------+
+    | L    |------>|+-----+|             +---+
+    `------'       || [0] |+------------>| 0 |
+                   |+-----+|             +---+
+                   |+-----+|              /\
+                   || [1] |+-----.    ,---'
+                   |+-----+|     |    |
+                   +-------+     `----+----.
+                                      |    |
+    ,-------.       +-----+            |    \/
+    |copiedL|------>| [0]-+------------'   +---+
+    `-------'       | [1]-+--------------->| 1 |
+                    +-----+                +---+
+											 /\	
+	,-------.                                |       
+    |   s   |---------------------------------
+    `-------'
 	```python
 	# Each of these left-hand sides is a reference
+	# attributes of objects and entries in lists or dictionaries are also references
 	my_obj.attr = 23
 	my_dict[key] = 24
 	my_list[index] = 25
 	my_obj.attr[key][index].attr = "etc, etc"
+		
+	# d['a'], d.values()[0], v1, and v2 are just different references (names) 
+	# for the same value 1.
+	d = {'a': 1}
+	v1 = d['a']
+	v2 = d.values()[0]
+	print v1 is v2
+	
+	# list is mutable, used as value of dict
+	d = {'a': [1, 2]}
+	v1 = d['a']
+	v2 = d.values()[0]
+	
+	from copy import copy
+	v3 = copy(d).values()[0]
+	
+	from copy import deepcopy
+	v4 = deepcopy(d).values()[0]
+	
+	print v1 is v2
+	print v1 is v3
+	print v1 is v4
+	```
+	Output
+	```python
+	True
+	True
+	False
 	```
 8. Lots of things are assignment
 	```python
@@ -84,6 +170,20 @@
 10. Names have no type, values have no scope.
 	* When we say that a function has a local variable, we mean that the name is scoped to the function: you can't use the name outside the function, and when the function returns, the name is destroyed. But as we've seen, if the name's value has other references, it will live on beyond the function call. It is a local name, not a local value.
 11. Values can't be deleted, only names can.
+12. Advice by a Pythonista:
+	* prefer "names", "bindings" and "objects" to "variable" in a python context
+	* __In general, whenever possible, python returns references to the same objects it already had around, rather than copying__
+	```python
+	testL = range(10)
+	testL2 = copy.deepcopy(testL)
+	
+	print testL[0] is testL2[0]
+	```
+	Output
+	```python
+	True
+	```
+	
 
 ###Roundup###
 1. __names__ refer to __values__.
