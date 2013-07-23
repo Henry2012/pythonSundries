@@ -54,11 +54,11 @@
 	```
 
 7. 	References can be more than just names.
-	# names look like this:
+	* names look like this:
 	![](/images/names.png)
-	# bindings look like this:
+	* bindings look like this:
 	![](/images/bindings.png)
-	# objects look like this:
+	* objects look like this:
 	![](/images/objects.png)
 	```python
 	d = {'a': 1, 'b':2}
