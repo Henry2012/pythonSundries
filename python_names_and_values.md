@@ -2,6 +2,14 @@
 1. http://nedbatchelder.com/text/names.html
 2. http://python.net/~mwh/hacks/objectthink.html
 
+###Intro questions###
+1. Is Python call-by-value or not?
+2. Why do beginners find it hard to make a tic-tac-toe board in Python?
+3. Why is "list += seq" not the same as "list = list + seq"?
+4. Why is "is" different than "==" and how come "2 + 2 is 4", but "1000 + 1 is not 1001"? (Solved)
+5. What's the deal with mutable default arguments to functions? (Solved)
+6. Why is it easy to make a list class attribute, but hard to make an int class attribute?
+
 ###Facts###
 1. Names refer to values.
 2. Many names can refer to one value.
