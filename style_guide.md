@@ -56,6 +56,7 @@ topics_list = [t for t in topics
 2. http://www.python.org/dev/peps/pep-0008/#naming-conventions
 3. http://pychecker.sourceforge.net/
 4. https://sites.google.com/a/khanacademy.org/forge/for-developers/styleguide/python
+5. http://zh-google-styleguide.readthedocs.org/en/latest/google-python-styleguide/
 
 
 
