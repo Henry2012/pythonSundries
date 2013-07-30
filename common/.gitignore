@@ -1,0 +1,8 @@
+io/
+*.dat
+*.pyc
+*.jar
+*.class
+*.txt
+*.pkl
+*.json
