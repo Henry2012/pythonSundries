@@ -1,11 +1,5 @@
 #-*- coding:utf-8 -*-
 
-#Yi Jin
-#last updated 10/8/2012, Yi Jin
-#EverString
-#basic_functions.py
-#-this program returns the strategic partnership headline/summary from related news
-
 import json
 import pickle
 import re
